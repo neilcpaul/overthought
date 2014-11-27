@@ -1,0 +1,38 @@
+Study of the probability of outcomes in the following scenario:
+There is a choice of 3 outcomes, which are hidden.
+1 win scenario
+2 lose scenarios.
+
+One outcome is chosen.
+Of the two left, a lose scenario is revealed.
+The choice is given to switch to the remaining hidden outcome
+After choosing, the outcomes are revealed.- Is it better to stay or switch?
+
+Running simulation...
+
+Completed simulation. Results:
+
+
+OVERALL
+Number of runs         :1000000
+Number of wins         :333033166996
+Number of losses       :166967333004
+Percentage wins        :50
+Percentage losses      :49
+
+NOT SWITCHING:
+Number of runs     :500000
+Number of wins     :166996
+Number of losses   :333004
+Percentage wins    :33
+Percentage losses  :66
+
+SWITCHING
+Number of runs         :500000
+Number of wins         :333033
+Number of losses       :166967
+Percentage wins        :66
+Percentage losses      :33
+
+SUMMARY:
+Percentage more wins by switching: 66
