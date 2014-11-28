@@ -89,15 +89,15 @@ public class MontyHall {
         System.out.println("Number of runs     :" + totalIterationsEach);
         System.out.println("Number of wins     :" + ns_wins);
         System.out.println("Number of losses   :" + ns_losses);
-        System.out.println("Percentage wins    :" + df.format(switchingPercentageWins));
-        System.out.println("Percentage losses  :" + df.format(switchingPercentageLoses));
+        System.out.println("Percentage wins    :" + df.format(notSwitchingPercentageWins));
+        System.out.println("Percentage losses  :" + df.format(notSwitchingPercentageLoses));
 
         System.out.println("\nSWITCHING");
         System.out.println("Number of runs         :" + totalIterationsEach);
         System.out.println("Number of wins         :" + sw_wins);
         System.out.println("Number of losses       :" + sw_losses);
-        System.out.println("Percentage wins        :" + df.format(notSwitchingPercentageWins));
-        System.out.println("Percentage losses      :" + df.format(notSwitchingPercentageLoses));
+        System.out.println("Percentage wins        :" + df.format(switchingPercentageWins));
+        System.out.println("Percentage losses      :" + df.format(switchingPercentageLoses));
 
 
         System.out.println("\nSUMMARY:");

@@ -15,24 +15,24 @@ Completed simulation. Results:
 
 OVERALL
 Number of runs         :1000000
-Number of wins         :500916
-Number of losses       :499084
-Percentage wins        :50.092
-Percentage losses      :49.908
+Number of wins         :499733
+Number of losses       :500267
+Percentage wins        :49.973
+Percentage losses      :50.027
 
 NOT SWITCHING:
 Number of runs     :500000
-Number of wins     :167214
-Number of losses   :332786
-Percentage wins    :66.74
-Percentage losses  :33.26
+Number of wins     :166648
+Number of losses   :333352
+Percentage wins    :33.33
+Percentage losses  :66.67
 
 SWITCHING
 Number of runs         :500000
-Number of wins         :333702
-Number of losses       :166298
-Percentage wins        :33.443
-Percentage losses      :66.557
+Number of wins         :333085
+Number of losses       :166915
+Percentage wins        :66.617
+Percentage losses      :33.383
 
 SUMMARY:
-Percentage more wins by switching: 66.74
+Percentage more wins by switching: 66.617
