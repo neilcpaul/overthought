@@ -1,5 +1,6 @@
 package neilcpaul.overthought.gametheory;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -64,32 +65,44 @@ public class MontyHall {
     }
 
     private void printResults() {
+        DecimalFormat df = new DecimalFormat("##.###");
+        double overallPercentageWins = ((double)(sw_wins+ns_wins)*100)/(totalIterationsEach*2);
+        double overallPercentageLoses = ((double)(sw_losses+ns_losses)*100)/(totalIterationsEach*2);
+
+        double switchingPercentageWins = ((double)(sw_wins)*100)/(totalIterationsEach);
+        double switchingPercentageLoses = ((double)(sw_losses)*100)/(totalIterationsEach);
+
+        double notSwitchingPercentageWins = ((double)(ns_wins)*100)/(totalIterationsEach);
+        double notSwitchingPercentageLoses = ((double)(ns_losses)*100)/(totalIterationsEach);
+
+        double percentageMoreWins = ((double)(ns_wins>sw_wins?ns_wins:sw_wins)*100)/totalIterationsEach;
+
         System.out.println("Completed simulation. Results:\n");
         System.out.println("\nOVERALL");
         System.out.println("Number of runs         :" + totalIterationsEach*2);
-        System.out.println("Number of wins         :" + sw_wins+ns_wins);
-        System.out.println("Number of losses       :" + sw_losses+ns_losses);
-        System.out.println("Percentage wins        :" + ((sw_wins+ns_wins)*100)/(totalIterationsEach*2));
-        System.out.println("Percentage losses      :" + ((sw_losses+ns_losses)*100)/(totalIterationsEach*2));
+        System.out.println("Number of wins         :" + (sw_wins+ns_wins));
+        System.out.println("Number of losses       :" + (sw_losses+ns_losses));
+        System.out.println("Percentage wins        :" + df.format(overallPercentageWins));
+        System.out.println("Percentage losses      :" + df.format(overallPercentageLoses));
 
         System.out.println("\nNOT SWITCHING:");
         System.out.println("Number of runs     :" + totalIterationsEach);
         System.out.println("Number of wins     :" + ns_wins);
         System.out.println("Number of losses   :" + ns_losses);
-        System.out.println("Percentage wins    :" + (ns_wins*100)/totalIterationsEach);
-        System.out.println("Percentage losses  :" + (ns_losses*100)/totalIterationsEach);
+        System.out.println("Percentage wins    :" + df.format(switchingPercentageWins));
+        System.out.println("Percentage losses  :" + df.format(switchingPercentageLoses));
 
         System.out.println("\nSWITCHING");
         System.out.println("Number of runs         :" + totalIterationsEach);
         System.out.println("Number of wins         :" + sw_wins);
         System.out.println("Number of losses       :" + sw_losses);
-        System.out.println("Percentage wins        :" + (sw_wins*100)/totalIterationsEach);
-        System.out.println("Percentage losses      :" + (sw_losses*100)/totalIterationsEach);
+        System.out.println("Percentage wins        :" + df.format(notSwitchingPercentageWins));
+        System.out.println("Percentage losses      :" + df.format(notSwitchingPercentageLoses));
 
 
         System.out.println("\nSUMMARY:");
         System.out.println("Percentage more wins by " + ((ns_wins>sw_wins)?"not switching":"switching") + ": "
-                        + ((ns_wins>sw_wins?ns_wins:sw_wins)*100)/totalIterationsEach);
+                        + df.format(percentageMoreWins));
 
     }
 
