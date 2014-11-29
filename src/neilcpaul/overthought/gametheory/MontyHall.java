@@ -75,7 +75,7 @@ public class MontyHall {
         double notSwitchingPercentageWins = ((double)(ns_wins)*100)/(totalIterationsEach);
         double notSwitchingPercentageLoses = ((double)(ns_losses)*100)/(totalIterationsEach);
 
-        double percentageMoreWins = ((double)(ns_wins>sw_wins?ns_wins:sw_wins)*100)/totalIterationsEach;
+        double percentageMoreWins = ((double)(ns_wins>sw_wins?ns_wins:sw_wins)*100)/(ns_wins<sw_wins?ns_wins:sw_wins);
 
         System.out.println("Completed simulation. Results:\n");
         System.out.println("\nOVERALL");
